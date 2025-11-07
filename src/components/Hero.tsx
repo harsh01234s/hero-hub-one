@@ -1,8 +1,12 @@
+import mandalaImage from "@/assets/mandala.png";
+
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
       {/* Mandala Background */}
-      <div className="absolute left-10 top-1/2 -translate-y-1/2 w-[500px] h-[500px] mandala-pattern opacity-40" />
+      <div className="absolute left-10 top-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-40">
+        <img src={mandalaImage} alt="" className="w-full h-full object-contain" />
+      </div>
       
       <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Side - Logo and Mandala */}

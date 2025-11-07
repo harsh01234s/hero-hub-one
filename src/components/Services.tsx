@@ -1,4 +1,5 @@
 import { useState } from "react";
+import borderFrame from "@/assets/border-frame.svg";
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState<number | null>(null);
@@ -102,8 +103,10 @@ const Services = () => {
         )}
       </div>
 
-      {/* Bottom Lace Border */}
-      <div className="absolute bottom-0 left-0 right-0 h-12 lace-border" />
+      {/* Bottom Border Frame */}
+      <div className="absolute bottom-0 left-0 right-0 h-[114px]">
+        <img src={borderFrame} alt="" className="w-full h-full object-cover" />
+      </div>
     </section>
   );
 };

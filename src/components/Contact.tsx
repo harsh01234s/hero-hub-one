@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import footerMandala from "@/assets/footer-mandala.svg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,8 +22,12 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 px-4 relative overflow-hidden">
       {/* Mandala Decorations */}
-      <div className="absolute top-10 right-10 w-64 h-64 mandala-pattern opacity-30" />
-      <div className="absolute bottom-10 left-10 w-64 h-64 mandala-pattern opacity-30" />
+      <div className="absolute top-10 right-10 w-64 h-64 opacity-30">
+        <img src={footerMandala} alt="" className="w-full h-full object-contain" />
+      </div>
+      <div className="absolute bottom-10 left-10 w-64 h-64 opacity-30">
+        <img src={footerMandala} alt="" className="w-full h-full object-contain" />
+      </div>
       
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12">
