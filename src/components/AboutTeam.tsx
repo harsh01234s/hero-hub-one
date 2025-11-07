@@ -1,6 +1,16 @@
+import teamSilhouette from "@/assets/team-silhouette.svg";
+import teamShadow from "@/assets/team-shadow.svg";
+
 const AboutTeam = () => {
   return (
-    <section id="team" className="py-20 px-4 relative">
+    <section 
+      id="team" 
+      className="py-20 px-4 relative"
+      style={{
+        backgroundColor: '#FDD0C1',
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E")`,
+      }}
+    >
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Content */}
@@ -33,18 +43,17 @@ const AboutTeam = () => {
 
           {/* Right Side - Team Silhouettes */}
           <div className="space-y-8">
-            <div className="flex justify-center gap-8">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="w-16 h-32 bg-navy rounded-full opacity-80"
-                  style={{
-                    clipPath: i % 2 === 0 
-                      ? "polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%)"
-                      : "polygon(25% 0%, 75% 0%, 90% 100%, 10% 100%)"
-                  }}
-                />
-              ))}
+            <div className="flex justify-center items-end relative">
+              <img 
+                src={teamSilhouette} 
+                alt="Team silhouettes" 
+                className="w-full max-w-md mx-auto"
+              />
+              <img 
+                src={teamShadow} 
+                alt="" 
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md"
+              />
             </div>
 
             <div className="space-y-4">
