@@ -1,16 +1,10 @@
 import teamSilhouette from "@/assets/team-silhouette.svg";
 import teamShadow from "@/assets/team-shadow.svg";
-
 const AboutTeam = () => {
-  return (
-    <section 
-      id="team" 
-      className="py-20 px-4 relative"
-      style={{
-        backgroundColor: '#FDD0C1',
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E")`,
-      }}
-    >
+  return <section id="team" className="py-20 px-4 relative" style={{
+    backgroundColor: '#FDD0C1',
+    backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E")`
+  }}>
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Content */}
@@ -31,9 +25,9 @@ const AboutTeam = () => {
             {/* Building Illustration Placeholder */}
             <div className="relative w-64 h-48 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg overflow-hidden">
               <div className="absolute inset-0 flex items-end justify-center pb-4">
-                <div className="w-32 h-32 bg-primary/30 rounded-t-full" />
+                
               </div>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-24 bg-primary/40 rounded-t-lg" />
+              
             </div>
 
             <div className="text-center italic text-navy">
@@ -44,16 +38,8 @@ const AboutTeam = () => {
           {/* Right Side - Team Silhouettes */}
           <div className="space-y-8">
             <div className="flex justify-center items-end relative">
-              <img 
-                src={teamSilhouette} 
-                alt="Team silhouettes" 
-                className="w-full max-w-md mx-auto"
-              />
-              <img 
-                src={teamShadow} 
-                alt="" 
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md"
-              />
+              <img src={teamSilhouette} alt="Team silhouettes" className="w-full max-w-md mx-auto" />
+              <img src={teamShadow} alt="" className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md" />
             </div>
 
             <div className="space-y-4">
@@ -83,8 +69,6 @@ const AboutTeam = () => {
 
       {/* Bottom Lace Border */}
       <div className="absolute bottom-0 left-0 right-0 h-12 lace-border" />
-    </section>
-  );
+    </section>;
 };
-
 export default AboutTeam;
