@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import AboutTeam from "@/components/AboutTeam";
+import AboutUs from "@/components/AboutUs";
+import Services from "@/components/Services";
+import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <main className="pt-16">
+        <Hero />
+        <AboutTeam />
+        <AboutUs />
+        <Services />
+        <Contact />
+      </main>
+      <footer className="bg-navy text-cream py-8 text-center">
+        <p className="text-sm">
+          © {new Date().getFullYear()} V Films. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 };
